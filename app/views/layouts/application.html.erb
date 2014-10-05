@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>JugzeA</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+	<title>JugzeA</title>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
 </head>
 <body>
+	<div>
+		<div class= 'navbar navbar-fixed-top'>
+			<div class= 'navbar-inner'>
+				<div class='container'>
+					<a class="brand" href="#">Jugze</a>
+					<form class="navbar-search pull-right">
+						<input type="text" class="search-query" placeholder="Search">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
 
-<%= yield %>
-
+	<div class='container'>
+		<h1>Jugze_a</h1>
+		<%= yield %>
+		<em>footer</em>
+	</div>
 </body>
 </html>
