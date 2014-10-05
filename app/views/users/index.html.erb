@@ -3,17 +3,17 @@
   <h1>All of the Users</h1>
 </div>
 
-<%= link_to "Post a New Status", new_status_path, class: "btn btn-success" %>
+<%= link_to "Post a New Status", new_users_path, class: "btn btn-success" %>
 
-<% @statuses.each do |status| %>
-<div class="status">
-  <strong><%= status.name %></strong>
-  <p><%= status.content %></p>
+<% @users.each do |user| %>
+<div class="users">
+  <strong><%= users.name %></strong>
+  <p><%= users.email %></p>
   <div class="meta">
-    <%= link_to time_ago_in_words(status.created_at) + " ago", status %> 
+    <%= link_to time_ago_in_words(users.created_at) + " ago", users %> 
     <span class="admin">
-      | <%= link_to "Edit", edit_status_path(status) %> | 
-      <%= link_to "Delete", status, method: :delete, data: { confirm: "Are you sure your want to delete this status?"} %>
+      | <%= link_to "Edit", edit_users_path(users) %> | 
+      <%= link_to "Delete", users, method: :delete, data: { confirm: "Are you sure your want to delete this users list?"} %>
     </span>
   </div>
 </div>
